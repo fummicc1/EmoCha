@@ -45,8 +45,8 @@ class StartViewModel: ObservableObject {
         realtimeClient.connect()
 
         realtimeClient.emit(
-            event: Events.getRoom,
+            event: Events.joinRoom,
             value: []
-        ).sink {}.store(in: &cancellables)
+        )
     }
 }

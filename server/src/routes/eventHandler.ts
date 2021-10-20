@@ -1,6 +1,8 @@
-import { MatchingEvent, MatchingEventData } from "./matchingEvent";
+import { joinRoom } from "../application/services/matchingService";
+import { JoinRoomEvent, JoinRoomEventData } from "./events/joinRoomEvent";
 
-const onMatchingEvent = (event: MatchingEvent) => {
-    const socketId = event.client.id;
-    const data: MatchingEventData = event.data;
+const onMatchingEvent = async (event: JoinRoomEvent) => {
+    const socket = event.client;
+    const data: JoinRoomEventData = event.data;
+    const service = await joinRoom(socket, data.roomName);
 }

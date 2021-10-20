@@ -10,7 +10,8 @@ import RealtimeClient
 
 public enum Events {
     case createRoom
-    case getRoom
+    case joinRoom
+    case getRoomState
     case fulfillRoom
 }
 
@@ -19,8 +20,10 @@ extension Events: Event {
         switch self {
         case .createRoom:
             return "create-room"
-        case .getRoom:
-            return "get-room"
+        case .joinRoom:
+            return "join-room"
+        case .getRoomState:
+            return "get-room-state"
         case .fulfillRoom:
             return "fulfill-room"
         }

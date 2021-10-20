@@ -15,7 +15,7 @@ public protocol RealtimeClient {
     var onError: AnyPublisher<Error, Never> { get }
     func connect()
     func disconnect()
-    func emit<E: Event>(event: E, value: RealtimeData) -> Future<Void, Never>
+    func emit<E: Event>(event: E, value: RealtimeData)
     func listen<E: Event>(event: E) -> AnyPublisher<RealtimeData, Never>
 }
 
@@ -64,15 +64,8 @@ extension RealtimeClientImpl: RealtimeClient {
         socket.disconnect()
     }
 
-    public func emit<E>(event: E, value: RealtimeData) -> Future<Void, Never> where E : Event {
-        Future { [weak self] promise in
-            self?.socket.emit(
-                event.name,
-                value
-            ) {
-                promise(.success(()))
-            }
-        }
+    public func emit<E>(event: E, value: RealtimeData) where E : Event {
+        socket.emit(event.name, value)
     }
 
     public func listen<E>(event: E) -> AnyPublisher<RealtimeData, Never> where E : Event {
