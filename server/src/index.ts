@@ -2,6 +2,7 @@ import express from 'express';
 import * as socketio from 'socket.io';
 import { createServer } from 'http';
 import * as dotenv from 'dotenv';
+import 'reflect-metadata';
 
 dotenv.config();
 

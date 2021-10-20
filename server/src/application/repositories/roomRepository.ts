@@ -1,4 +1,6 @@
+import { injectable, singleton } from 'tsyringe';
 import { v4 } from 'uuid';
+import { Room } from '../models/room';
 
 interface RoomRepository {
     createRoom(name: string): Promise<void>;
@@ -7,6 +9,7 @@ interface RoomRepository {
     deleteRoom(id: string): Promise<void>;
 }
 
+@singleton()
 class RoomRepositoryImpl implements RoomRepository {
 
     rooms: Room[] = []
