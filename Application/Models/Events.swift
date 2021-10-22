@@ -10,19 +10,26 @@ import RealtimeClient
 
 public enum Events {
     case createRoom
-    case getRoom
-    case fulfillRoom
+    case joinRoom
+    case roomState
+
+    case userState
+    case setupUser
 }
 
 extension Events: Event {
     public var name: String {
         switch self {
+        case .userState:
+            return "user"
+        case .setupUser:
+            return "setup-user"
         case .createRoom:
             return "create-room"
-        case .getRoom:
-            return "get-room"
-        case .fulfillRoom:
-            return "fulfill-room"
+        case .joinRoom:
+            return "join-room"
+        case .roomState:
+            return "room"
         }
     }
 }

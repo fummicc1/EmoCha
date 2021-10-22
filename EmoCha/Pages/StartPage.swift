@@ -21,6 +21,9 @@ struct StartPage: View {
             .padding()
             .navigationTitle("EmoCha")
         }
+        .onAppear {
+            viewModel.onAppear()
+        }
     }
 }
 

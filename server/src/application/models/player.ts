@@ -1,5 +1,7 @@
-interface Player {    
-    id: string
-    name: string
-    opponentId: string | null
+interface Player {
+  id: string;
+  name: string;
+  opponentId: string | null;
 }
+
+export { Player };
