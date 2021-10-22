@@ -40,13 +40,6 @@ public class RealtimeClientImpl {
         socket.on(clientEvent: .connect) { _, _ in
             print("connect")
         }
-
-        socket.on(clientEvent: .error) { data, a in
-            print(data)
-            if let error = data as? Error {
-                self.error.send(error)
-            }
-        }
     }
 }
 
