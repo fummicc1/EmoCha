@@ -27,8 +27,10 @@
 		D38156C9271ED9B600F9FDDD /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = D38156C5271ED9B600F9FDDD /* haarcascade_eye.xml */; };
 		D38156CA271ED9B600F9FDDD /* haarcascade_upperbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = D38156C6271ED9B600F9FDDD /* haarcascade_upperbody.xml */; };
 		D38156CB271ED9B600F9FDDD /* haarcascade_smile.xml in Resources */ = {isa = PBXBuildFile; fileRef = D38156C7271ED9B600F9FDDD /* haarcascade_smile.xml */; };
-		D3AD3A6A2722E647002767A2 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; };
-		D3AD3A6B2722E647002767A2 /* opencv2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD3A6C2722E9C8002767A2 /* Secrets.swift */; };
+		D3AD3A6E2722EBF8002767A2 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; };
+		D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3AF4E38271DB7BB002C8335 /* RealtimeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */; };
 		D3AF4E3B271DB7D9002C8335 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF4E3A271DB7D9002C8335 /* SocketIO */; };
 		D3AF4E40271DC07E002C8335 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E3F271DC07E002C8335 /* Face.swift */; };
@@ -72,8 +74,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */,
 				D30C56FF271BB8AD00DBB0F1 /* Application.framework in Embed Frameworks */,
-				D3AD3A6B2722E647002767A2 /* opencv2.xcframework in Embed Frameworks */,
+				D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +119,7 @@
 		D38156C5271ED9B600F9FDDD /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
 		D38156C6271ED9B600F9FDDD /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
 		D38156C7271ED9B600F9FDDD /* haarcascade_smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_smile.xml; sourceTree = "<group>"; };
+		D3AD3A6C2722E9C8002767A2 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeClient.swift; sourceTree = "<group>"; };
 		D3AF4E3F271DC07E002C8335 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		D3AF4E41271DC266002C8335 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -130,7 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AD3A6A2722E647002767A2 /* opencv2.xcframework in Frameworks */,
+				D3AD3A6E2722EBF8002767A2 /* opencv2.xcframework in Frameworks */,
 				D30C572B271BBE7D00DBB0F1 /* RealtimeClient.framework in Frameworks */,
 				D30C56FE271BB8AD00DBB0F1 /* Application.framework in Frameworks */,
 			);
@@ -188,6 +192,7 @@
 				D30C56B9271BB35E00DBB0F1 /* RootView.swift */,
 				D30C56BB271BB35F00DBB0F1 /* Assets.xcassets */,
 				D30C56BD271BB35F00DBB0F1 /* Preview Content */,
+				D3AD3A6C2722E9C8002767A2 /* Secrets.swift */,
 			);
 			path = EmoCha;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D30C5709271BB8CA00DBB0F1 /* CameraView.swift in Sources */,
+				D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */,
 				D30C5710271BBD8000DBB0F1 /* GamePage.swift in Sources */,
 				D30C56BA271BB35E00DBB0F1 /* RootView.swift in Sources */,
 				D30C56B8271BB35E00DBB0F1 /* EmoChaApp.swift in Sources */,

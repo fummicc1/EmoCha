@@ -29,6 +29,10 @@ const io = new socketio.Server(server);
 
 const port = process.env.PORT || 8080;
 
+app.get("/test", (req, res) => {
+  res.send("Hello, this is test page.");
+});
+
 io.on("connection", (socket: socketio.Socket) => {
   console.info("Hello,", socket.id);
   socket.on("join-room", (data: JoinRoomEventData) => {
