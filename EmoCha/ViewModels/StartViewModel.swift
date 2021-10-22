@@ -30,10 +30,11 @@ class StartViewModel: ObservableObject {
 
     init(realtimeClient: RealtimeClient) {
         self.realtimeClient = realtimeClient
-        self.realtimeClient.connect()
     }
 
     func onAppear() {
+        realtimeClient.connect()
+        
         realtimeClient.listen(event: Events.roomState)
             .sink { data in
                 print(data)

@@ -30,6 +30,7 @@
 		D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD3A6C2722E9C8002767A2 /* Secrets.swift */; };
 		D3AD3A6E2722EBF8002767A2 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; };
 		D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3AF4E38271DB7BB002C8335 /* RealtimeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */; };
 		D3AF4E3B271DB7D9002C8335 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF4E3A271DB7D9002C8335 /* SocketIO */; };
 		D3AF4E40271DC07E002C8335 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E3F271DC07E002C8335 /* Face.swift */; };
@@ -73,6 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */,
 				D30C56FF271BB8AD00DBB0F1 /* Application.framework in Embed Frameworks */,
 				D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */,
 			);
