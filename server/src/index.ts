@@ -23,6 +23,10 @@ io.on("connection", (socket: socketio.Socket) => {
   sockets.set(socket.id, socket);
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello!");
+});
+
 app.post("/users/setup", (req, res) => {
   const socketId: string = req.body.socketId;
   const uid: string | null = req.body.uid;
