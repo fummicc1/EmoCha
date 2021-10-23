@@ -12,6 +12,7 @@ import Combine
 public typealias RealtimeData = SocketData
 
 public protocol RealtimeClient {
+    var onUpdateSocketId: AnyPublisher<String, Never> { get }
     var onError: AnyPublisher<Error, Never> { get }
     func connect()
     func disconnect()
@@ -27,6 +28,7 @@ public class RealtimeClientImpl {
 
     private let manager: SocketManager
     private let socket: SocketIOClient
+    private let socketIdSubject: PassthroughSubject<String, Never> = PassthroughSubject()
     private var subjects: [PassthroughSubject<RealtimeData, Never>] = []
     private let error: PassthroughSubject<Error, Never> = PassthroughSubject()
 
@@ -37,13 +39,22 @@ public class RealtimeClientImpl {
         )
         self.socket = manager.defaultSocket
 
-        socket.on(clientEvent: .connect) { _, _ in
+        socket.on(clientEvent: .connect) { [weak self] data, _ in
             print("connect")
+            guard let info = data[1] as? [String: String], let sid = info["sid"] else {
+                assertionFailure()
+                return
+            }
+            self?.socketIdSubject.send(sid)
         }
     }
 }
 
 extension RealtimeClientImpl: RealtimeClient {
+
+    public var onUpdateSocketId: AnyPublisher<String, Never> {
+        socketIdSubject.eraseToAnyPublisher()
+    }
 
     public var onError: AnyPublisher<Error, Never> {
         error.eraseToAnyPublisher()

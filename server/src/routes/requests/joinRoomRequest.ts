@@ -1,3 +1,7 @@
-interface JoinRoomRequest {}
+interface JoinRoomRequestData {
+  socketId: string;
+  uid: string;
+  roomCode: string | null;
+}
 
-export { JoinRoomRequest };
+export { JoinRoomRequestData };

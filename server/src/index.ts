@@ -4,18 +4,10 @@ import { createServer } from "http";
 import * as dotenv from "dotenv";
 import "reflect-metadata";
 import {
-  JoinRoomEvent,
-  JoinRoomEventData,
-} from "./routes/events/joinRoomEvent";
-import {
   onCreateRoomEvent,
   onJoinRoomEvent,
   onSetupUserEvent,
 } from "./routes/eventHandler";
-import {
-  CreateRoomEvent,
-  CreateRoomEventData,
-} from "./routes/events/createRoomEvent";
 import {
   SetupUserEvent,
   SetupUserEventData,
@@ -35,19 +27,6 @@ app.get("/test", (req, res) => {
 
 io.on("connection", (socket: socketio.Socket) => {
   console.info("Hello,", socket.id);
-  socket.on("join-room", (data: JoinRoomEventData) => {
-    const event: JoinRoomEvent = new JoinRoomEvent(socket, data);
-    onJoinRoomEvent(event);
-  });
-  socket.on("create-room", (data: CreateRoomEventData) => {
-    const event = new CreateRoomEvent(socket, data);
-    onCreateRoomEvent(event);
-  });
-  socket.on("setup-user", (data: SetupUserEventData) => {
-    const event = new SetupUserEvent(socket, data);
-    console.log(event);
-    onSetupUserEvent(event);
-  });
 });
 
 server.listen(port, () => {

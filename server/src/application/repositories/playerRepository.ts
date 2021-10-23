@@ -4,6 +4,7 @@ import { Player } from "../models/player";
 
 interface PlayerRepository {
   create(name: string): Promise<Player>;
+  update(player: Player): Promise<void>;
   findWithUid(uid: string): Promise<Player>;
   findAll(): Promise<Player[]>;
 }
@@ -17,10 +18,17 @@ class PlayerRepositoryImpl implements PlayerRepository {
       id: generateRandomId(32),
       name: name,
       opponentId: null,
+      socketId: null,
     };
     this.players.push(player);
     return player;
   }
+
+  async update(player: Player): Promise<void> {
+    const index = this.players.findIndex((p) => p.id === player.id);
+    this.players[index] = player;
+  }
+
   async findWithUid(uid: string): Promise<Player> {
     const player = this.players.find((p) => p.id === uid);
     if (!player) {

@@ -31,6 +31,13 @@
 		D3AD3A6E2722EBF8002767A2 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; };
 		D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3AD3A892723B23E002767A2 /* APIClient.docc in Sources */ = {isa = PBXBuildFile; fileRef = D3AD3A882723B23E002767A2 /* APIClient.docc */; };
+		D3AD3A972723B23E002767A2 /* APIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D3AD3A872723B23E002767A2 /* APIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3AD3A9A2723B23E002767A2 /* APIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD3A852723B23E002767A2 /* APIClient.framework */; };
+		D3AD3A9B2723B23E002767A2 /* APIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3AD3A852723B23E002767A2 /* APIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3AD3AA32723B252002767A2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD3AA22723B252002767A2 /* APIClient.swift */; };
+		D3AD3AA62723B286002767A2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D3AD3AA52723B286002767A2 /* Alamofire */; };
+		D3AD3AA82723B28C002767A2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D3AD3AA72723B28C002767A2 /* Alamofire */; };
 		D3AF4E38271DB7BB002C8335 /* RealtimeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */; };
 		D3AF4E3B271DB7D9002C8335 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF4E3A271DB7D9002C8335 /* SocketIO */; };
 		D3AF4E40271DC07E002C8335 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E3F271DC07E002C8335 /* Face.swift */; };
@@ -58,6 +65,13 @@
 			remoteGlobalIDString = D30C5715271BBE7D00DBB0F1;
 			remoteInfo = RealtimeClient;
 		};
+		D3AD3A982723B23E002767A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D30C56AC271BB35E00DBB0F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3AD3A842723B23E002767A2;
+			remoteInfo = APIClient;
+		};
 		D3AF4E4F271DE053002C8335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D30C56AC271BB35E00DBB0F1 /* Project object */;
@@ -74,6 +88,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D3AD3A9B2723B23E002767A2 /* APIClient.framework in Embed Frameworks */,
 				D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */,
 				D30C56FF271BB8AD00DBB0F1 /* Application.framework in Embed Frameworks */,
 				D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */,
@@ -120,6 +135,10 @@
 		D38156C6271ED9B600F9FDDD /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
 		D38156C7271ED9B600F9FDDD /* haarcascade_smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_smile.xml; sourceTree = "<group>"; };
 		D3AD3A6C2722E9C8002767A2 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		D3AD3A852723B23E002767A2 /* APIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AD3A872723B23E002767A2 /* APIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		D3AD3A882723B23E002767A2 /* APIClient.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = APIClient.docc; sourceTree = "<group>"; };
+		D3AD3AA22723B252002767A2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeClient.swift; sourceTree = "<group>"; };
 		D3AF4E3F271DC07E002C8335 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		D3AF4E41271DC266002C8335 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -134,6 +153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AD3AA62723B286002767A2 /* Alamofire in Frameworks */,
+				D3AD3A9A2723B23E002767A2 /* APIClient.framework in Frameworks */,
 				D3AD3A6E2722EBF8002767A2 /* opencv2.xcframework in Frameworks */,
 				D30C572B271BBE7D00DBB0F1 /* RealtimeClient.framework in Frameworks */,
 				D30C56FE271BB8AD00DBB0F1 /* Application.framework in Frameworks */,
@@ -156,6 +177,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3AD3A822723B23E002767A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AD3AA82723B28C002767A2 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -165,6 +194,7 @@
 				D30C56B6271BB35E00DBB0F1 /* EmoCha */,
 				D30C56EA271BB8AD00DBB0F1 /* Application */,
 				D30C5717271BBE7D00DBB0F1 /* RealtimeClient */,
+				D3AD3A862723B23E002767A2 /* APIClient */,
 				D30C56B5271BB35E00DBB0F1 /* Products */,
 				D3AF4E39271DB7D9002C8335 /* Frameworks */,
 			);
@@ -176,6 +206,7 @@
 				D30C56B4271BB35E00DBB0F1 /* EmoCha.app */,
 				D30C56E9271BB8AD00DBB0F1 /* Application.framework */,
 				D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */,
+				D3AD3A852723B23E002767A2 /* APIClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,6 +295,16 @@
 			path = FaceData;
 			sourceTree = "<group>";
 		};
+		D3AD3A862723B23E002767A2 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				D3AD3A872723B23E002767A2 /* APIClient.h */,
+				D3AD3A882723B23E002767A2 /* APIClient.docc */,
+				D3AD3AA22723B252002767A2 /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
 		D3AF4E39271DB7D9002C8335 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +369,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3AD3A802723B23E002767A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AD3A972723B23E002767A2 /* APIClient.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -345,9 +394,11 @@
 			dependencies = (
 				D30C56FD271BB8AD00DBB0F1 /* PBXTargetDependency */,
 				D30C572A271BBE7D00DBB0F1 /* PBXTargetDependency */,
+				D3AD3A992723B23E002767A2 /* PBXTargetDependency */,
 			);
 			name = EmoCha;
 			packageProductDependencies = (
+				D3AD3AA52723B286002767A2 /* Alamofire */,
 			);
 			productName = SmileWith;
 			productReference = D30C56B4271BB35E00DBB0F1 /* EmoCha.app */;
@@ -394,6 +445,27 @@
 			productReference = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		D3AD3A842723B23E002767A2 /* APIClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3AD3AA02723B23E002767A2 /* Build configuration list for PBXNativeTarget "APIClient" */;
+			buildPhases = (
+				D3AD3A802723B23E002767A2 /* Headers */,
+				D3AD3A812723B23E002767A2 /* Sources */,
+				D3AD3A822723B23E002767A2 /* Frameworks */,
+				D3AD3A832723B23E002767A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APIClient;
+			packageProductDependencies = (
+				D3AD3AA72723B28C002767A2 /* Alamofire */,
+			);
+			productName = APIClient;
+			productReference = D3AD3A852723B23E002767A2 /* APIClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -413,6 +485,9 @@
 					D30C5715271BBE7D00DBB0F1 = {
 						CreatedOnToolsVersion = 13.0;
 					};
+					D3AD3A842723B23E002767A2 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 				};
 			};
 			buildConfigurationList = D30C56AF271BB35E00DBB0F1 /* Build configuration list for PBXProject "EmoCha" */;
@@ -426,6 +501,7 @@
 			mainGroup = D30C56AB271BB35E00DBB0F1;
 			packageReferences = (
 				D30C56E1271BB85F00DBB0F1 /* XCRemoteSwiftPackageReference "socket" */,
+				D3AD3AA42723B286002767A2 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D30C56B5271BB35E00DBB0F1 /* Products */;
 			projectDirPath = "";
@@ -434,6 +510,7 @@
 				D30C56B3271BB35E00DBB0F1 /* EmoCha */,
 				D30C56E8271BB8AD00DBB0F1 /* Application */,
 				D30C5715271BBE7D00DBB0F1 /* RealtimeClient */,
+				D3AD3A842723B23E002767A2 /* APIClient */,
 			);
 		};
 /* End PBXProject section */
@@ -460,6 +537,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D30C5714271BBE7D00DBB0F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3AD3A832723B23E002767A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -507,6 +591,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3AD3A812723B23E002767A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3AD3A892723B23E002767A2 /* APIClient.docc in Sources */,
+				D3AD3AA32723B252002767A2 /* APIClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -519,6 +612,11 @@
 			isa = PBXTargetDependency;
 			target = D30C5715271BBE7D00DBB0F1 /* RealtimeClient */;
 			targetProxy = D30C5729271BBE7D00DBB0F1 /* PBXContainerItemProxy */;
+		};
+		D3AD3A992723B23E002767A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3AD3A842723B23E002767A2 /* APIClient */;
+			targetProxy = D3AD3A982723B23E002767A2 /* PBXContainerItemProxy */;
 		};
 		D3AF4E50271DE053002C8335 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -838,6 +936,66 @@
 			};
 			name = Release;
 		};
+		D3AD3A9C2723B23E002767A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2X6AD4W323;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.EmoCha.APIClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3AD3A9D2723B23E002767A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2X6AD4W323;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.EmoCha.APIClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -877,6 +1035,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D3AD3AA02723B23E002767A2 /* Build configuration list for PBXNativeTarget "APIClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3AD3A9C2723B23E002767A2 /* Debug */,
+				D3AD3A9D2723B23E002767A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -888,9 +1055,27 @@
 				minimumVersion = 16.0.1;
 			};
 		};
+		D3AD3AA42723B286002767A2 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D3AD3AA52723B286002767A2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3AD3AA42723B286002767A2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D3AD3AA72723B28C002767A2 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3AD3AA42723B286002767A2 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		D3AF4E3A271DB7D9002C8335 /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D30C56E1271BB85F00DBB0F1 /* XCRemoteSwiftPackageReference "socket" */;

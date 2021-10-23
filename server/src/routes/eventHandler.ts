@@ -1,11 +1,12 @@
+import { container } from "tsyringe";
 import { Room } from "../application/models/room";
+import { PlayerRepositoryImpl } from "../application/repositories/playerRepository";
 import { setupUser } from "../application/services/playerService";
 import { createRoom, joinRoom } from "../application/services/roomService";
-import { CreateRoomEvent, CreateRoomEventData } from "./events/createRoomEvent";
-import { JoinRoomEvent, JoinRoomEventData } from "./events/joinRoomEvent";
 import { PlayerEvent } from "./events/playerEvent";
 import { RoomEvent } from "./events/roomEvent";
 import { SetupUserEvent, SetupUserEventData } from "./events/setupUserEvent";
+import { JoinRoomRequestData } from "./requests/joinRoomRequest";
 
 const onSetupUserEvent = async (event: SetupUserEvent) => {
   const socket = event.client;
@@ -20,9 +21,10 @@ const onSetupUserEvent = async (event: SetupUserEvent) => {
   }
 };
 
-const onJoinRoomEvent = async (event: JoinRoomEvent) => {
-  const socket = event.client;
-  const data: JoinRoomEventData = event.data;
+const onJoinRoomEvent = async (data: JoinRoomRequestData) => {
+  const playerRepository = container.resolve(PlayerRepositoryImpl);
+  const socketId = data.socketId;
+  const socket = playerRepository;
   const uid = data.uid;
   try {
     const room: Room = await joinRoom(socket, uid, data.roomCode);
