@@ -27,7 +27,7 @@ const app = express();
 const server = createServer(app);
 const io = new socketio.Server(server);
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 8080;
 
 app.get("/test", (req, res) => {
   res.send("Hello, this is test page.");
