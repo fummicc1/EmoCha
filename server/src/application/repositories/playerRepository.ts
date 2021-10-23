@@ -3,7 +3,7 @@ import { generateRandomId } from "../../utils/randomId";
 import { Player } from "../models/player";
 
 interface PlayerRepository {
-  create(name: string): Promise<Player>;
+  create(name: string, socketId: string): Promise<Player>;
   update(player: Player): Promise<void>;
   findWithUid(uid: string): Promise<Player>;
   findAll(): Promise<Player[]>;
@@ -13,12 +13,12 @@ interface PlayerRepository {
 class PlayerRepositoryImpl implements PlayerRepository {
   players: Player[] = [];
 
-  async create(name: string): Promise<Player> {
+  async create(name: string, socketId: string): Promise<Player> {
     const player: Player = {
       id: generateRandomId(32),
       name: name,
       opponentId: null,
-      socketId: null,
+      socketId: socketId,
     };
     this.players.push(player);
     return player;

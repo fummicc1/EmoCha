@@ -10,6 +10,7 @@ import Combine
 import Application
 import SwiftUI
 import RealtimeClient
+import APIClient
 
 enum MatchingState {
     case prepare
@@ -27,9 +28,29 @@ class StartViewModel: ObservableObject {
 
     private var cancellables: Set<AnyCancellable> = []
     private let realtimeClient: RealtimeClient
+    private let apiClient: APIClient
 
-    init(realtimeClient: RealtimeClient) {
+    init(realtimeClient: RealtimeClient, apiClient: APIClient = APIClientImpl()) {
         self.realtimeClient = realtimeClient
+        self.apiClient = apiClient
+
+        realtimeClient.onUpdateSocketId
+            .setFailureType(to: Error.self)
+            .flatMap { socketId -> AnyPublisher<SetupUserRequest.Response, Error> in
+                let request = SetupUserRequest(socketId: socketId)
+                return apiClient.request(request: request)
+            }
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    print(error)
+                case .finished:
+                    break
+                }
+            }, receiveValue: { response in
+                print(response.message)
+            })
+            .store(in: &cancellables)
     }
 
     func onAppear() {

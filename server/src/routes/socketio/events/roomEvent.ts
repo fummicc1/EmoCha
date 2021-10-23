@@ -1,5 +1,5 @@
 import { Socket } from "socket.io";
-import { Room } from "../../application/models/room";
+import { Room } from "../../../application/models/room";
 import { Event } from "../event";
 
 class RoomEvent implements Event<Room> {

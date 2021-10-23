@@ -7,12 +7,14 @@ import {
   RoomRepositoryImpl,
 } from "../repositories/roomRepository";
 
-const createRoom = async (uid: string) => {
+const createRoom = async (uid: string): Promise<Room> => {
   const repository: RoomRepository = container.resolve(RoomRepositoryImpl);
   const room = await repository.createRoom("Room");
   const playerRepository = container.resolve(PlayerRepositoryImpl);
   const player = await playerRepository.findWithUid(uid);
   room.players.push(player);
+  await repository.updateRoom(room);
+  return room;
 };
 
 const getVacantRooms = async (): Promise<Room[]> => {

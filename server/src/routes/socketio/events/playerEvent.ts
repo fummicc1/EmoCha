@@ -1,9 +1,9 @@
 import { Socket } from "socket.io";
-import { Player } from "../../application/models/player";
+import { Player } from "../../../application/models/player";
 import { Event } from "../event";
 
 class PlayerEvent implements Event<Player> {
-  name: string = "room";
+  name: string = "player";
   client: Socket;
   data: Player;
   constructor(client: Socket, data: Player) {
