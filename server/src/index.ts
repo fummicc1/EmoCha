@@ -4,7 +4,11 @@ import { createServer } from "http";
 import * as dotenv from "dotenv";
 import "reflect-metadata";
 import { SetupUserRequestData } from "./routes/rest/requests/setupUserRequest";
-import { onSetupUserRequest } from "./routes/rest/requestHandler";
+import { JoinRoomRequestData } from "./routes/rest/requests/joinRoomRequest";
+import {
+  onJoinRoomRequest,
+  onSetupUserRequest,
+} from "./routes/rest/requestHandler";
 
 dotenv.config();
 
@@ -14,6 +18,17 @@ const io = new socketio.Server(server);
 
 const port = process.env.PORT || 8080;
 
+const errorMiddleware = (
+  err: Error,
+  req: express.Request,
+  res: express.Response,
+  next: express.NextFunction
+) => {
+  res.status(500);
+  res.send({ error: err });
+};
+
+app.use(errorMiddleware);
 app.use(express.json());
 
 let sockets: Map<string, socketio.Socket> = new Map();
@@ -27,7 +42,7 @@ app.get("/", (req, res) => {
   res.send("Hello!");
 });
 
-app.post("/users/setup", (req, res) => {
+app.post("/users/setup", async (req, res, next) => {
   const socketId: string = req.body.socketId;
   const uid: string | null = req.body.uid;
   if (!socketId) {
@@ -39,7 +54,38 @@ app.post("/users/setup", (req, res) => {
     uid: uid,
     allSockets: sockets,
   };
-  onSetupUserRequest(data);
+  try {
+    await onSetupUserRequest(data);
+    res.status(201).send({
+      message: "OK",
+    });
+  } catch (err) {
+    next(err);
+  }
+});
+
+app.post("/rooms/join", async (req, res, next) => {
+  const socketId: string = req.body.socketId;
+  if (!socketId) {
+    res.status(400).send("Invalid parameter: socketId is missing");
+    return;
+  }
+  const roomCode: string | null = req.body.roomCode;
+  const uid: string = req.body.uid;
+  const data: JoinRoomRequestData = {
+    socketId: socketId,
+    roomCode: roomCode,
+    uid: uid,
+    allSockets: sockets,
+  };
+  try {
+    await onJoinRoomRequest(data);
+    res.status(201).send({
+      message: "OK",
+    });
+  } catch (err) {
+    next(err);
+  }
 });
 
 server.listen(port, () => {

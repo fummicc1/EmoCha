@@ -33,11 +33,13 @@ public class RealtimeClientImpl {
     private let error: PassthroughSubject<Error, Never> = PassthroughSubject()
 
     public init(url: URL) {
-        self.manager = SocketManager(
+        manager = SocketManager(
             socketURL: url,
             config: [.log(true), .compress]
         )
-        self.socket = manager.defaultSocket
+        socket = manager.defaultSocket
+
+        connect()
 
         socket.on(clientEvent: .connect) { [weak self] data, _ in
             print("connect")

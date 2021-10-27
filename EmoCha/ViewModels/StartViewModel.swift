@@ -29,6 +29,7 @@ class StartViewModel: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     private let realtimeClient: RealtimeClient
     private let apiClient: APIClient
+    private var socketId: String? = nil
 
     init(realtimeClient: RealtimeClient, apiClient: APIClient = APIClientImpl()) {
         self.realtimeClient = realtimeClient
@@ -37,6 +38,7 @@ class StartViewModel: ObservableObject {
         realtimeClient.onUpdateSocketId
             .setFailureType(to: Error.self)
             .flatMap { socketId -> AnyPublisher<SetupUserRequest.Response, Error> in
+                self.socketId = socketId
                 let request = SetupUserRequest(socketId: socketId)
                 return apiClient.request(request: request)
             }
@@ -51,11 +53,7 @@ class StartViewModel: ObservableObject {
                 print(response.message)
             })
             .store(in: &cancellables)
-    }
 
-    func onAppear() {
-        realtimeClient.connect()
-        
         realtimeClient.listen(event: Events.roomState)
             .sink { data in
                 print(data)
@@ -67,20 +65,29 @@ class StartViewModel: ObservableObject {
                 print(data)
             }
             .store(in: &cancellables)
-
-        let setupUser: [String: Any] = [
-            "uid": uid
-        ]
-        realtimeClient.emit(event: Events.setupUser, value: setupUser)
     }
 
     func startMatching() {
+        guard let socketId = socketId else {
+            assertionFailure()
+            return
+        }
         state = .matching
-        realtimeClient.connect()
-
-        realtimeClient.emit(
-            event: Events.joinRoom,
-            value: []
+        let request = JoinRoomRequest(
+            socketId: socketId,
+            roomCode: nil
         )
+        apiClient.request(request: request)
+            .sink { completion in
+                switch completion {
+                case .failure(let error):
+                    print(error)
+                case .finished:
+                    break
+                }
+            } receiveValue: { response in
+                print(response.message)
+            }
+            .store(in: &cancellables)
     }
 }
