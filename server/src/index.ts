@@ -70,12 +70,11 @@ app.post("/rooms/join", async (req, res, next) => {
     res.status(400).send("Invalid parameter: socketId is missing");
     return;
   }
-  const roomCode: string | null = req.body.roomCode;
+  const roomCode: string | undefined = req.body.roomCode;
   const uid: string = req.body.uid;
   const data: JoinRoomRequestData = {
     socketId: socketId,
-    roomCode: roomCode,
-    uid: uid,
+    roomCode: roomCode ?? null,
     allSockets: sockets,
   };
   try {

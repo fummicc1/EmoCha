@@ -28,10 +28,10 @@ const onSetupUserRequest = async (data: SetupUserRequestData) => {
 const onJoinRoomRequest = async (data: JoinRoomRequestData) => {
   const socketId = data.socketId;
   const socket = data.allSockets.get(socketId);
-  if (!socket) return;
-  const uid = data.uid;
+  if (socket == null) return;
+  const sid = data.socketId;
   try {
-    const room: Room = await joinRoom(socket, uid, data.roomCode);
+    const room: Room = await joinRoom(socket, sid, data.roomCode);
     const sendEvent = new RoomEvent(socket, room);
     socket.to(room.id).emit(sendEvent.name, sendEvent.data);
   } catch (err) {

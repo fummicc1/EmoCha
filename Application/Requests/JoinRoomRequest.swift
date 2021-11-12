@@ -19,7 +19,7 @@ public struct JoinRoomRequest: Request {
     let socketId: String
     let roomCode: String?
 
-    public var path: String = "/users/setup"
+    public var path: String = "/rooms/join"
     public var method: APIClientImpl.Method = .post
     public var parameters: [String: Any] {
         [
