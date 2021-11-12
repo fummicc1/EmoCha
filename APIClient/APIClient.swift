@@ -53,9 +53,10 @@ extension APIClientImpl: APIClient {
 
     public func request<R>(request: R) -> AnyPublisher<R.Response, Error> where R : Request {
         AF.request(
-            "\(Secrets.api)/\(request.path)",
+            "\(Secrets.api)\(request.path)",
             method: request.method.af,
             parameters: request.parameters,
+            encoding: JSONEncoding.default,
             headers: HTTPHeaders(request.headers)
         )
             .publishDecodable()

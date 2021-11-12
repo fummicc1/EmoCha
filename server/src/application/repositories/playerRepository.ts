@@ -31,7 +31,8 @@ class PlayerRepositoryImpl implements PlayerRepository {
 
   async findWithUid(uid: string): Promise<Player> {
     const player = this.players.find((p) => p.id === uid);
-    if (!player) {
+    console.log(uid);
+    if (player == null) {
       throw new Error("Not found");
     }
     return player;

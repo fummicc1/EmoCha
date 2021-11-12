@@ -39,7 +39,7 @@ class StartViewModel: ObservableObject {
             .setFailureType(to: Error.self)
             .flatMap { socketId -> AnyPublisher<Void, Error> in
                 self.socketId = socketId
-                return self.interactor.setupUser(socketId: socketId, uid: nil)
+                return self.interactor.setupUser(socketId: socketId, uid: "nil")
             }
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -54,6 +54,12 @@ class StartViewModel: ObservableObject {
         realtimeClient.listen(event: Events.roomState)
             .sink { room in
                 print(room)
+            }
+            .store(in: &cancellables)
+
+        realtimeClient.listen(event: Events.playerState)
+            .sink { player in
+                print(player)
             }
             .store(in: &cancellables)
     }

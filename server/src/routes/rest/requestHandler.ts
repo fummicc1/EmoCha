@@ -15,7 +15,7 @@ const onSetupUserRequest = async (data: SetupUserRequestData) => {
   try {
     const user = await setupUser(uid, socketId);
     const socket = data.allSockets.get(socketId);
-    if (!socket) {
+    if (socket == null) {
       return;
     }
     const event = new PlayerEvent(socket, user);

@@ -7,13 +7,14 @@ const setupUser = async (
   socketId: string
 ): Promise<Player> => {
   const playerRepository = container.resolve(PlayerRepositoryImpl);
-  if (uid) {
-    const player = await playerRepository.findWithUid(uid);
-    if (player) {
-      return player;
-    }
+  console.log(uid);
+  console.log(typeof uid);
+  let player: Player;
+  if (uid == null) {
+    player = await playerRepository.create("Unknown", socketId);
+  } else {
+    player = await playerRepository.findWithUid(uid);
   }
-  const player = await playerRepository.create("Unknown", socketId);
   return player;
 };
 

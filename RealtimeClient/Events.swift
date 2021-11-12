@@ -9,14 +9,14 @@ import Foundation
 
 public enum Events {
     case roomState
-    case userState
+    case playerState
 }
 
 extension Events: Event {
     public var name: String {
         switch self {
-        case .userState:
-            return "user"
+        case .playerState:
+            return "player"
         case .roomState:
             return "room"
         }
