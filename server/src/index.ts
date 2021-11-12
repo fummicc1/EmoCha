@@ -9,6 +9,7 @@ import {
   onJoinRoomRequest,
   onSetupUserRequest,
 } from "./routes/rest/requestHandler";
+import { generateRandomId } from "./utils/randomId";
 
 dotenv.config();
 
@@ -65,16 +66,15 @@ app.post("/users/setup", async (req, res, next) => {
 });
 
 app.post("/rooms/join", async (req, res, next) => {
-  const socketId: string = req.body.socketId;
+  const socketId: string = req.body.socketId ?? null;
   if (!socketId) {
     res.status(400).send("Invalid parameter: socketId is missing");
     return;
   }
-  const roomCode: string | undefined = req.body.roomCode;
-  const uid: string = req.body.uid;
+  const roomCode: string = req.body.roomCode ?? generateRandomId(6);
   const data: JoinRoomRequestData = {
     socketId: socketId,
-    roomCode: roomCode ?? null,
+    roomCode: roomCode,
     allSockets: sockets,
   };
   try {
