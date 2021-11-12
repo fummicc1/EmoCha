@@ -12,11 +12,14 @@ struct GamePage: View {
     @ObservedObject var viewModel: GameViewModel = GameViewModel()
 
     var body: some View {
-        CameraView(cameraOutput: Binding(get: {
-            viewModel.currentImageData
-        }, set: { imageData in
-            viewModel.update(imageData: imageData)
-        }))
+        TabView {
+            CameraView(cameraOutput: Binding(get: {
+                viewModel.currentImageData
+            }, set: { imageData in
+                viewModel.update(imageData: imageData)
+            }))
+            ChatPage()
+        }
     }
 }
 

@@ -18,14 +18,20 @@
 		D30C5709271BB8CA00DBB0F1 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C5708271BB8CA00DBB0F1 /* CameraView.swift */; };
 		D30C570E271BBD7800DBB0F1 /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C570D271BBD7800DBB0F1 /* StartPage.swift */; };
 		D30C5710271BBD8000DBB0F1 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C570F271BBD8000DBB0F1 /* GamePage.swift */; };
-		D30C571A271BBE7D00DBB0F1 /* RealtimeClient.docc in Sources */ = {isa = PBXBuildFile; fileRef = D30C5719271BBE7D00DBB0F1 /* RealtimeClient.docc */; };
-		D30C5728271BBE7D00DBB0F1 /* RealtimeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D30C5718271BBE7D00DBB0F1 /* RealtimeClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D30C572B271BBE7D00DBB0F1 /* RealtimeClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */; };
 		D313A11C2723C382001B1C1A /* SetupUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313A11B2723C382001B1C1A /* SetupUserRequest.swift */; };
 		D313A11E2723C487001B1C1A /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313A11D2723C487001B1C1A /* Secrets.swift */; };
 		D313A1202723C7F0001B1C1A /* MessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D313A11F2723C7F0001B1C1A /* MessageResponse.swift */; };
 		D313A1282723C8ED001B1C1A /* libAPIClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36E800D2723C2EC009700CF /* libAPIClient.a */; };
 		D313A12A2723C8F6001B1C1A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D313A1292723C8F6001B1C1A /* Alamofire */; };
+		D33F8853273EB241004DB7ED /* ChatPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F8852273EB241004DB7ED /* ChatPage.swift */; };
+		D33F8877273EBC9B004DB7ED /* StartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F8876273EBC9B004DB7ED /* StartInteractor.swift */; };
+		D33F8893273EC454004DB7ED /* RealtimeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F8861273EB978004DB7ED /* RealtimeClient.swift */; };
+		D33F8894273EC454004DB7ED /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E4B271DC79B002C8335 /* Events.swift */; };
+		D33F8897273EC471004DB7ED /* RealtimeClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33F8888273EC447004DB7ED /* RealtimeClient.framework */; };
+		D33F8898273EC471004DB7ED /* RealtimeClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33F8888273EC447004DB7ED /* RealtimeClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D33F889D273EC49A004DB7ED /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D33F889C273EC49A004DB7ED /* SocketIO */; };
+		D33F889E273EC4B6004DB7ED /* RealtimeClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33F8888273EC447004DB7ED /* RealtimeClient.framework */; };
+		D33F889F273EC4B6004DB7ED /* RealtimeClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D33F8888273EC447004DB7ED /* RealtimeClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D36E80102723C2EC009700CF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36E800F2723C2EC009700CF /* APIClient.swift */; };
 		D36F832A2728E3A100FC4F60 /* JoinRoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36F83292728E3A100FC4F60 /* JoinRoomRequest.swift */; };
 		D38156AB271ECE4400F9FDDD /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38156AA271ECE4400F9FDDD /* GameViewModel.swift */; };
@@ -37,17 +43,11 @@
 		D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD3A6C2722E9C8002767A2 /* Secrets.swift */; };
 		D3AD3A6E2722EBF8002767A2 /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; };
 		D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D3AF4E38271DB7BB002C8335 /* RealtimeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */; };
-		D3AF4E3B271DB7D9002C8335 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D3AF4E3A271DB7D9002C8335 /* SocketIO */; };
 		D3AF4E40271DC07E002C8335 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E3F271DC07E002C8335 /* Face.swift */; };
 		D3AF4E42271DC266002C8335 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E41271DC266002C8335 /* Player.swift */; };
 		D3AF4E44271DC2C5002C8335 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E43271DC2C5002C8335 /* Room.swift */; };
 		D3AF4E47271DC3E8002C8335 /* SWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E46271DC3E8002C8335 /* SWButton.swift */; };
 		D3AF4E49271DC59E002C8335 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E48271DC59E002C8335 /* StartViewModel.swift */; };
-		D3AF4E4C271DC79B002C8335 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E4B271DC79B002C8335 /* Events.swift */; };
-		D3AF4E4D271DE053002C8335 /* RealtimeClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */; };
-		D3AF4E4E271DE053002C8335 /* RealtimeClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +58,6 @@
 			remoteGlobalIDString = D30C56E8271BB8AD00DBB0F1;
 			remoteInfo = Application;
 		};
-		D30C5729271BBE7D00DBB0F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D30C56AC271BB35E00DBB0F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D30C5715271BBE7D00DBB0F1;
-			remoteInfo = RealtimeClient;
-		};
 		D313A1242723C8C0001B1C1A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D30C56AC271BB35E00DBB0F1 /* Project object */;
@@ -72,11 +65,18 @@
 			remoteGlobalIDString = D36E800C2723C2EC009700CF;
 			remoteInfo = APIClient;
 		};
-		D3AF4E4F271DE053002C8335 /* PBXContainerItemProxy */ = {
+		D33F8895273EC469004DB7ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D30C56AC271BB35E00DBB0F1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D30C5715271BBE7D00DBB0F1;
+			remoteGlobalIDString = D33F8887273EC447004DB7ED;
+			remoteInfo = RealtimeClient;
+		};
+		D33F88A0273EC4B6004DB7ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D30C56AC271BB35E00DBB0F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D33F8887273EC447004DB7ED;
 			remoteInfo = RealtimeClient;
 		};
 /* End PBXContainerItemProxy section */
@@ -88,9 +88,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D3AD3A7F27231D2E002767A2 /* RealtimeClient.framework in Embed Frameworks */,
 				D30C56FF271BB8AD00DBB0F1 /* Application.framework in Embed Frameworks */,
+				D33F889F273EC4B6004DB7ED /* RealtimeClient.framework in Embed Frameworks */,
 				D3AD3A6F2722EBF8002767A2 /* opencv2.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D33F889B273EC471004DB7ED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D33F8898273EC471004DB7ED /* RealtimeClient.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,17 +113,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D3AF4E51271DE053002C8335 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D3AF4E4E271DE053002C8335 /* RealtimeClient.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -129,18 +129,18 @@
 		D30C5708271BB8CA00DBB0F1 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		D30C570D271BBD7800DBB0F1 /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		D30C570F271BBD8000DBB0F1 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
-		D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealtimeClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D30C5718271BBE7D00DBB0F1 /* RealtimeClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealtimeClient.h; sourceTree = "<group>"; };
-		D30C5719271BBE7D00DBB0F1 /* RealtimeClient.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = RealtimeClient.docc; sourceTree = "<group>"; };
 		D313A11B2723C382001B1C1A /* SetupUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupUserRequest.swift; sourceTree = "<group>"; };
 		D313A11D2723C487001B1C1A /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		D313A11F2723C7F0001B1C1A /* MessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageResponse.swift; sourceTree = "<group>"; };
+		D33F8852273EB241004DB7ED /* ChatPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPage.swift; sourceTree = "<group>"; };
+		D33F8861273EB978004DB7ED /* RealtimeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtimeClient.swift; sourceTree = "<group>"; };
+		D33F8876273EBC9B004DB7ED /* StartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
+		D33F8888273EC447004DB7ED /* RealtimeClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealtimeClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36E800D2723C2EC009700CF /* libAPIClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAPIClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36E800F2723C2EC009700CF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		D36F83292728E3A100FC4F60 /* JoinRoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomRequest.swift; sourceTree = "<group>"; };
 		D381567D271E5F6000F9FDDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D38156A0271E851100F9FDDD /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../OpenCV/ios/opencv2.framework; sourceTree = "<group>"; };
-		D38156A4271E852E00F9FDDD /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Frameworks/opencv2.framework; sourceTree = "<group>"; };
 		D38156A8271E85A200F9FDDD /* SmileJudge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileJudge.swift; sourceTree = "<group>"; };
 		D38156AA271ECE4400F9FDDD /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = opencv2.xcframework; path = Frameworks/opencv2.xcframework; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 		D38156C6271ED9B600F9FDDD /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
 		D38156C7271ED9B600F9FDDD /* haarcascade_smile.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_smile.xml; sourceTree = "<group>"; };
 		D3AD3A6C2722E9C8002767A2 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
-		D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeClient.swift; sourceTree = "<group>"; };
 		D3AF4E3F271DC07E002C8335 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
 		D3AF4E41271DC266002C8335 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D3AF4E43271DC2C5002C8335 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
@@ -164,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3AD3A6E2722EBF8002767A2 /* opencv2.xcframework in Frameworks */,
-				D30C572B271BBE7D00DBB0F1 /* RealtimeClient.framework in Frameworks */,
+				D33F889E273EC4B6004DB7ED /* RealtimeClient.framework in Frameworks */,
 				D30C56FE271BB8AD00DBB0F1 /* Application.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,16 +172,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33F8897273EC471004DB7ED /* RealtimeClient.framework in Frameworks */,
 				D313A1282723C8ED001B1C1A /* libAPIClient.a in Frameworks */,
-				D3AF4E4D271DE053002C8335 /* RealtimeClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30C5713271BBE7D00DBB0F1 /* Frameworks */ = {
+		D33F8885273EC447004DB7ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3AF4E3B271DB7D9002C8335 /* SocketIO in Frameworks */,
+				D33F889D273EC49A004DB7ED /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,9 +202,9 @@
 				D36E800E2723C2EC009700CF /* APIClient */,
 				D30C56EA271BB8AD00DBB0F1 /* Application */,
 				D30C56B6271BB35E00DBB0F1 /* EmoCha */,
+				D33F8889273EC447004DB7ED /* RealtimeClient */,
 				D3AF4E39271DB7D9002C8335 /* Frameworks */,
 				D30C56B5271BB35E00DBB0F1 /* Products */,
-				D30C5717271BBE7D00DBB0F1 /* RealtimeClient */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,8 +213,8 @@
 			children = (
 				D30C56B4271BB35E00DBB0F1 /* EmoCha.app */,
 				D30C56E9271BB8AD00DBB0F1 /* Application.framework */,
-				D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */,
 				D36E800D2723C2EC009700CF /* libAPIClient.a */,
+				D33F8888273EC447004DB7ED /* RealtimeClient.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,8 +247,8 @@
 		D30C56EA271BB8AD00DBB0F1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D33F8875273EBC79004DB7ED /* Interactors */,
 				D313A11A2723C372001B1C1A /* Requests */,
-				D3AF4E3D271DC056002C8335 /* Repositories */,
 				D3AF4E3C271DC036002C8335 /* Models */,
 				D30C56EB271BB8AD00DBB0F1 /* Application.h */,
 				D30C56EC271BB8AD00DBB0F1 /* Application.docc */,
@@ -271,18 +270,9 @@
 			children = (
 				D30C570D271BBD7800DBB0F1 /* StartPage.swift */,
 				D30C570F271BBD8000DBB0F1 /* GamePage.swift */,
+				D33F8852273EB241004DB7ED /* ChatPage.swift */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		D30C5717271BBE7D00DBB0F1 /* RealtimeClient */ = {
-			isa = PBXGroup;
-			children = (
-				D30C5718271BBE7D00DBB0F1 /* RealtimeClient.h */,
-				D30C5719271BBE7D00DBB0F1 /* RealtimeClient.docc */,
-				D3AF4E37271DB7BB002C8335 /* RealtimeClient.swift */,
-			);
-			path = RealtimeClient;
 			sourceTree = "<group>";
 		};
 		D313A11A2723C372001B1C1A /* Requests */ = {
@@ -293,6 +283,23 @@
 				D36F83292728E3A100FC4F60 /* JoinRoomRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		D33F8875273EBC79004DB7ED /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				D33F8876273EBC9B004DB7ED /* StartInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		D33F8889273EC447004DB7ED /* RealtimeClient */ = {
+			isa = PBXGroup;
+			children = (
+				D33F8861273EB978004DB7ED /* RealtimeClient.swift */,
+				D3AF4E4B271DC79B002C8335 /* Events.swift */,
+			);
+			path = RealtimeClient;
 			sourceTree = "<group>";
 		};
 		D36E800E2723C2EC009700CF /* APIClient */ = {
@@ -328,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				D38156AC271ECFAF00F9FDDD /* opencv2.xcframework */,
-				D38156A4271E852E00F9FDDD /* opencv2.framework */,
 				D38156A0271E851100F9FDDD /* opencv2.framework */,
 			);
 			name = Frameworks;
@@ -340,16 +346,8 @@
 				D3AF4E3F271DC07E002C8335 /* Face.swift */,
 				D3AF4E41271DC266002C8335 /* Player.swift */,
 				D3AF4E43271DC2C5002C8335 /* Room.swift */,
-				D3AF4E4B271DC79B002C8335 /* Events.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D3AF4E3D271DC056002C8335 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 		D3AF4E45271DC3DC002C8335 /* Atoms */ = {
@@ -380,11 +378,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30C5711271BBE7D00DBB0F1 /* Headers */ = {
+		D33F8883273EC447004DB7ED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30C5728271BBE7D00DBB0F1 /* RealtimeClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +401,7 @@
 			);
 			dependencies = (
 				D30C56FD271BB8AD00DBB0F1 /* PBXTargetDependency */,
-				D30C572A271BBE7D00DBB0F1 /* PBXTargetDependency */,
+				D33F88A1273EC4B6004DB7ED /* PBXTargetDependency */,
 			);
 			name = EmoCha;
 			packageProductDependencies = (
@@ -421,12 +418,12 @@
 				D30C56E5271BB8AD00DBB0F1 /* Sources */,
 				D30C56E6271BB8AD00DBB0F1 /* Frameworks */,
 				D30C56E7271BB8AD00DBB0F1 /* Resources */,
-				D3AF4E51271DE053002C8335 /* Embed Frameworks */,
+				D33F889B273EC471004DB7ED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D3AF4E50271DE053002C8335 /* PBXTargetDependency */,
+				D33F8896273EC469004DB7ED /* PBXTargetDependency */,
 				D313A1252723C8C0001B1C1A /* PBXTargetDependency */,
 			);
 			name = Application;
@@ -436,14 +433,14 @@
 			productReference = D30C56E9271BB8AD00DBB0F1 /* Application.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D30C5715271BBE7D00DBB0F1 /* RealtimeClient */ = {
+		D33F8887273EC447004DB7ED /* RealtimeClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D30C572D271BBE7D00DBB0F1 /* Build configuration list for PBXNativeTarget "RealtimeClient" */;
+			buildConfigurationList = D33F8890273EC447004DB7ED /* Build configuration list for PBXNativeTarget "RealtimeClient" */;
 			buildPhases = (
-				D30C5711271BBE7D00DBB0F1 /* Headers */,
-				D30C5712271BBE7D00DBB0F1 /* Sources */,
-				D30C5713271BBE7D00DBB0F1 /* Frameworks */,
-				D30C5714271BBE7D00DBB0F1 /* Resources */,
+				D33F8883273EC447004DB7ED /* Headers */,
+				D33F8884273EC447004DB7ED /* Sources */,
+				D33F8885273EC447004DB7ED /* Frameworks */,
+				D33F8886273EC447004DB7ED /* Resources */,
 			);
 			buildRules = (
 			);
@@ -451,10 +448,10 @@
 			);
 			name = RealtimeClient;
 			packageProductDependencies = (
-				D3AF4E3A271DB7D9002C8335 /* SocketIO */,
+				D33F889C273EC49A004DB7ED /* SocketIO */,
 			);
 			productName = RealtimeClient;
-			productReference = D30C5716271BBE7D00DBB0F1 /* RealtimeClient.framework */;
+			productReference = D33F8888273EC447004DB7ED /* RealtimeClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D36E800C2723C2EC009700CF /* APIClient */ = {
@@ -494,7 +491,7 @@
 					D30C56E8271BB8AD00DBB0F1 = {
 						CreatedOnToolsVersion = 13.0;
 					};
-					D30C5715271BBE7D00DBB0F1 = {
+					D33F8887273EC447004DB7ED = {
 						CreatedOnToolsVersion = 13.0;
 					};
 					D36E800C2723C2EC009700CF = {
@@ -521,8 +518,8 @@
 			targets = (
 				D30C56B3271BB35E00DBB0F1 /* EmoCha */,
 				D30C56E8271BB8AD00DBB0F1 /* Application */,
-				D30C5715271BBE7D00DBB0F1 /* RealtimeClient */,
 				D36E800C2723C2EC009700CF /* APIClient */,
+				D33F8887273EC447004DB7ED /* RealtimeClient */,
 			);
 		};
 /* End PBXProject section */
@@ -548,7 +545,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30C5714271BBE7D00DBB0F1 /* Resources */ = {
+		D33F8886273EC447004DB7ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -562,6 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33F8853273EB241004DB7ED /* ChatPage.swift in Sources */,
 				D30C5709271BB8CA00DBB0F1 /* CameraView.swift in Sources */,
 				D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */,
 				D30C5710271BBD8000DBB0F1 /* GamePage.swift in Sources */,
@@ -579,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33F8877273EBC9B004DB7ED /* StartInteractor.swift in Sources */,
 				D313A11C2723C382001B1C1A /* SetupUserRequest.swift in Sources */,
 				D3AF4E40271DC07E002C8335 /* Face.swift in Sources */,
 				D3AF4E42271DC266002C8335 /* Player.swift in Sources */,
@@ -586,16 +585,15 @@
 				D30C56ED271BB8AD00DBB0F1 /* Application.docc in Sources */,
 				D313A1202723C7F0001B1C1A /* MessageResponse.swift in Sources */,
 				D36F832A2728E3A100FC4F60 /* JoinRoomRequest.swift in Sources */,
-				D3AF4E4C271DC79B002C8335 /* Events.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30C5712271BBE7D00DBB0F1 /* Sources */ = {
+		D33F8884273EC447004DB7ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D30C571A271BBE7D00DBB0F1 /* RealtimeClient.docc in Sources */,
-				D3AF4E38271DB7BB002C8335 /* RealtimeClient.swift in Sources */,
+				D33F8894273EC454004DB7ED /* Events.swift in Sources */,
+				D33F8893273EC454004DB7ED /* RealtimeClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,11 +614,6 @@
 			target = D30C56E8271BB8AD00DBB0F1 /* Application */;
 			targetProxy = D30C56FC271BB8AD00DBB0F1 /* PBXContainerItemProxy */;
 		};
-		D30C572A271BBE7D00DBB0F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D30C5715271BBE7D00DBB0F1 /* RealtimeClient */;
-			targetProxy = D30C5729271BBE7D00DBB0F1 /* PBXContainerItemProxy */;
-		};
 		D313A1222723C85C001B1C1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = D313A1212723C85C001B1C1A /* Alamofire */;
@@ -630,10 +623,15 @@
 			target = D36E800C2723C2EC009700CF /* APIClient */;
 			targetProxy = D313A1242723C8C0001B1C1A /* PBXContainerItemProxy */;
 		};
-		D3AF4E50271DE053002C8335 /* PBXTargetDependency */ = {
+		D33F8896273EC469004DB7ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D30C5715271BBE7D00DBB0F1 /* RealtimeClient */;
-			targetProxy = D3AF4E4F271DE053002C8335 /* PBXContainerItemProxy */;
+			target = D33F8887273EC447004DB7ED /* RealtimeClient */;
+			targetProxy = D33F8895273EC469004DB7ED /* PBXContainerItemProxy */;
+		};
+		D33F88A1273EC4B6004DB7ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D33F8887273EC447004DB7ED /* RealtimeClient */;
+			targetProxy = D33F88A0273EC4B6004DB7ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -884,7 +882,7 @@
 			};
 			name = Release;
 		};
-		D30C572E271BBE7D00DBB0F1 /* Debug */ = {
+		D33F8891273EC447004DB7ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -897,7 +895,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -910,13 +907,12 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		D30C572F271BBE7D00DBB0F1 /* Release */ = {
+		D33F8892273EC447004DB7ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -929,7 +925,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -942,7 +937,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TVOS_DEPLOYMENT_TARGET = 14.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1008,11 +1002,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D30C572D271BBE7D00DBB0F1 /* Build configuration list for PBXNativeTarget "RealtimeClient" */ = {
+		D33F8890273EC447004DB7ED /* Build configuration list for PBXNativeTarget "RealtimeClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D30C572E271BBE7D00DBB0F1 /* Debug */,
-				D30C572F271BBE7D00DBB0F1 /* Release */,
+				D33F8891273EC447004DB7ED /* Debug */,
+				D33F8892273EC447004DB7ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1058,7 +1052,7 @@
 			package = D3AD3AA42723B286002767A2 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		D3AF4E3A271DB7D9002C8335 /* SocketIO */ = {
+		D33F889C273EC49A004DB7ED /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D30C56E1271BB85F00DBB0F1 /* XCRemoteSwiftPackageReference "socket" */;
 			productName = SocketIO;

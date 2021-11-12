@@ -9,8 +9,8 @@ import Foundation
 import Combine
 import Application
 import SwiftUI
-import RealtimeClient
 import APIClient
+import RealtimeClient
 
 enum MatchingState {
     case prepare
@@ -27,20 +27,19 @@ class StartViewModel: ObservableObject {
     @AppStorage("uid") var uid: String?
 
     private var cancellables: Set<AnyCancellable> = []
+    private let interactor: StartInteractor
     private let realtimeClient: RealtimeClient
-    private let apiClient: APIClient
     private var socketId: String? = nil
 
-    init(realtimeClient: RealtimeClient, apiClient: APIClient = APIClientImpl()) {
+    init(startInteractor: StartInteractor, realtimeClient: RealtimeClient) {
+        self.interactor = startInteractor
         self.realtimeClient = realtimeClient
-        self.apiClient = apiClient
 
         realtimeClient.onUpdateSocketId
             .setFailureType(to: Error.self)
-            .flatMap { socketId -> AnyPublisher<SetupUserRequest.Response, Error> in
+            .flatMap { socketId -> AnyPublisher<Void, Error> in
                 self.socketId = socketId
-                let request = SetupUserRequest(socketId: socketId)
-                return apiClient.request(request: request)
+                return self.interactor.setupUser(socketId: socketId, uid: nil)
             }
             .sink(receiveCompletion: { completion in
                 switch completion {
@@ -49,20 +48,12 @@ class StartViewModel: ObservableObject {
                 case .finished:
                     break
                 }
-            }, receiveValue: { response in
-                print(response.message)
-            })
+            }, receiveValue: { })
             .store(in: &cancellables)
 
         realtimeClient.listen(event: Events.roomState)
-            .sink { data in
-                print(data)
-            }
-            .store(in: &cancellables)
-
-        realtimeClient.listen(event: Events.userState)
-            .sink { data in
-                print(data)
+            .sink { room in
+                print(room)
             }
             .store(in: &cancellables)
     }
@@ -73,11 +64,7 @@ class StartViewModel: ObservableObject {
             return
         }
         state = .matching
-        let request = JoinRoomRequest(
-            socketId: socketId,
-            roomCode: nil
-        )
-        apiClient.request(request: request)
+        interactor.joinRoom(socketId: socketId)
             .sink { completion in
                 switch completion {
                 case .failure(let error):
@@ -85,9 +72,7 @@ class StartViewModel: ObservableObject {
                 case .finished:
                     break
                 }
-            } receiveValue: { response in
-                print(response.message)
-            }
+            } receiveValue: { }
             .store(in: &cancellables)
     }
 }

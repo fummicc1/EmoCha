@@ -6,15 +6,10 @@
 //
 
 import Foundation
-import RealtimeClient
 
 public enum Events {
-    case createRoom
-    case joinRoom
     case roomState
-
     case userState
-    case setupUser
 }
 
 extension Events: Event {
@@ -22,12 +17,6 @@ extension Events: Event {
         switch self {
         case .userState:
             return "user"
-        case .setupUser:
-            return "setup-user"
-        case .createRoom:
-            return "create-room"
-        case .joinRoom:
-            return "join-room"
         case .roomState:
             return "room"
         }

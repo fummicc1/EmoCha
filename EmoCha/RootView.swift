@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import Application
 
 struct RootView: View {
     var body: some View {
-        StartPage(viewModel: StartViewModel(realtimeClient: realtimeClient))
+        StartPage(
+            viewModel: StartViewModel(
+                startInteractor: StartInteractorImpl(),
+                realtimeClient: realtimeClient
+            )
+        )
     }
 }
 

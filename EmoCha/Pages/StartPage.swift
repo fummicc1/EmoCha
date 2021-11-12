@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Application
 
 struct StartPage: View {
 
@@ -28,6 +29,7 @@ struct StartPage_Previews: PreviewProvider {
     static var previews: some View {
         StartPage(
             viewModel: StartViewModel(
+                startInteractor: StartInteractorImpl(),
                 realtimeClient: realtimeClient
             )
         )
