@@ -35,7 +35,9 @@ const onJoinRoomRequest = async (data: JoinRoomRequestData) => {
     const sendEvent = new RoomEvent(socket, room);
     socket.to(room.id).emit(sendEvent.name, sendEvent.data);
   } catch (err) {
-    console.error(err);
+    if (err == new Error("No vacants")) {
+      const uid = await createRoom(uid);
+    }
   }
 };
 

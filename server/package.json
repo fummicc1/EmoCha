@@ -24,7 +24,6 @@
     "http": "^0.0.1-security",
     "reflect-metadata": "^0.1.13",
     "socket.io": "^4.3.1",
-    "tsyringe": "^4.6.0",
-    "uuid": "^8.3.2"
+    "tsyringe": "^4.6.0"
   }
 }

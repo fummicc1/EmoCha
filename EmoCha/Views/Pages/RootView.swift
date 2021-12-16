@@ -10,12 +10,7 @@ import Application
 
 struct RootView: View {
     var body: some View {
-        StartPage(
-            viewModel: StartViewModel(
-                startInteractor: StartInteractorImpl(),
-                realtimeClient: realtimeClient
-            )
-        )
+        VStack { }
     }
 }
 
