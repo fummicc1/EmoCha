@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "EasyFirebaseSwift",
+        "repositoryURL": "https://github.com/fummicc1/EasyFirebaseSwift",
+        "state": {
+          "branch": null,
+          "revision": "d62b93fe23de00562ad42eafd7f6631d36f31942",
+          "version": "1.5.0"
+        }
+      },
+      {
         "package": "Firebase",
         "repositoryURL": "https://github.com/firebase/firebase-ios-sdk",
         "state": {

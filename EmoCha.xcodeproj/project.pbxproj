@@ -16,6 +16,7 @@
 		D30C56FE271BB8AD00DBB0F1 /* Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30C56E9271BB8AD00DBB0F1 /* Application.framework */; };
 		D30C56FF271BB8AD00DBB0F1 /* Application.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C56E9271BB8AD00DBB0F1 /* Application.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D30C5709271BB8CA00DBB0F1 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C5708271BB8CA00DBB0F1 /* CameraView.swift */; };
+		D3AD09CB277694DE008FAB4E /* EasyFirebaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3AD09CA277694DE008FAB4E /* EasyFirebaseSwift */; };
 		D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD3A6C2722E9C8002767A2 /* Secrets.swift */; };
 		D3AF4E47271DC3E8002C8335 /* SWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E46271DC3E8002C8335 /* SWButton.swift */; };
 		D3FF6D53276AC6EF003C8E9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D52276AC6EF003C8E9E /* User.swift */; };
@@ -105,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3FF6D56276AC74D003C8E9E /* FirebaseAuth in Frameworks */,
+				D3AD09CB277694DE008FAB4E /* EasyFirebaseSwift in Frameworks */,
 				D3FF6D5C276AC74D003C8E9E /* FirebaseFirestore in Frameworks */,
 				D3FF6D64276AC74D003C8E9E /* FirebaseStorageCombine-Community in Frameworks */,
 				D3FF6D6A276AC761003C8E9E /* FirebaseAnalyticsSwift-Beta in Frameworks */,
@@ -296,6 +298,7 @@
 				D3FF6D67276AC761003C8E9E /* FirebaseAnalytics */,
 				D3FF6D69276AC761003C8E9E /* FirebaseAnalyticsSwift-Beta */,
 				D3FF6D6B276AC761003C8E9E /* FirebaseCrashlytics */,
+				D3AD09CA277694DE008FAB4E /* EasyFirebaseSwift */,
 			);
 			productName = Application;
 			productReference = D30C56E9271BB8AD00DBB0F1 /* Application.framework */;
@@ -330,6 +333,7 @@
 			mainGroup = D30C56AB271BB35E00DBB0F1;
 			packageReferences = (
 				D3FF6D3F276AC6BD003C8E9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D3AD09C9277694DE008FAB4E /* XCRemoteSwiftPackageReference "EasyFirebaseSwift" */,
 			);
 			productRefGroup = D30C56B5271BB35E00DBB0F1 /* Products */;
 			projectDirPath = "";
@@ -676,6 +680,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D3AD09C9277694DE008FAB4E /* XCRemoteSwiftPackageReference "EasyFirebaseSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fummicc1/EasyFirebaseSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		D3FF6D3F276AC6BD003C8E9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -687,6 +699,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D3AD09CA277694DE008FAB4E /* EasyFirebaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3AD09C9277694DE008FAB4E /* XCRemoteSwiftPackageReference "EasyFirebaseSwift" */;
+			productName = EasyFirebaseSwift;
+		};
 		D3FF6D55276AC74D003C8E9E /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D3FF6D3F276AC6BD003C8E9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

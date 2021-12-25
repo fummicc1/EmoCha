@@ -1,37 +1,30 @@
-//
-//  User.swift
-//  Application
-//
-//  Created by Fumiya Tanaka on 2021/12/16.
-//
-
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import EasyFirebaseSwift
 
-public struct User: Codable {
+public struct User: FirestoreModel {
+    public static var collectionName: String = "users"
 
-    static let collectionName = "users"
+    @DocumentID public var ref: DocumentReference?
+    @ServerTimestamp public var createdAt: Timestamp?
+    @ServerTimestamp public var updatedAt: Timestamp?
 
-    @DocumentID var id: String?
-    @ServerTimestamp var createdAt: Timestamp?
-    @ServerTimestamp var updatedAt: Timestamp?
-
-    public let auth: String
-    public let displayName: String
+    public var auth: String
+    public var displayName: String
 }
 
 extension User {
     public struct Progress: Codable {
 
-        static let collectionName = "progresses"
+        public static let collectionName = "progresses"
 
-        @DocumentID var id: String?
-        @ServerTimestamp var createdAt: Timestamp?
-        @ServerTimestamp var updatedAt: Timestamp?
+        @DocumentID public var ref: DocumentReference?
+        @ServerTimestamp public var createdAt: Timestamp?
+        @ServerTimestamp public var updatedAt: Timestamp?
 
-        public let date: Date
-        public let corrections: [String]
-        public let mistakes: [String]
+        public var date: Date
+        public var corrections: [String]
+        public var mistakes: [String]
     }
 }
