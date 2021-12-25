@@ -2,8 +2,15 @@ import SwiftUI
 import Application
 
 struct RootView: View {
+
+    @ObservedObject var model: RootModel
+
     var body: some View {
-        VStack { }
+        VStack {
+            if model.isLoggedIn {
+                
+            }
+        }
     }
 }
 

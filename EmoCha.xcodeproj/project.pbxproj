@@ -17,6 +17,9 @@
 		D30C56FF271BB8AD00DBB0F1 /* Application.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C56E9271BB8AD00DBB0F1 /* Application.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D30C5709271BB8CA00DBB0F1 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30C5708271BB8CA00DBB0F1 /* CameraView.swift */; };
 		D3AD09CB277694DE008FAB4E /* EasyFirebaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3AD09CA277694DE008FAB4E /* EasyFirebaseSwift */; };
+		D3AD09CD2776C25C008FAB4E /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD09CC2776C25C008FAB4E /* RootModel.swift */; };
+		D3AD09D12776C3BA008FAB4E /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD09D02776C3BA008FAB4E /* OnboardingPage.swift */; };
+		D3AD09D32776C3C9008FAB4E /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD09D22776C3C9008FAB4E /* OnboardingModel.swift */; };
 		D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AD3A6C2722E9C8002767A2 /* Secrets.swift */; };
 		D3AF4E47271DC3E8002C8335 /* SWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF4E46271DC3E8002C8335 /* SWButton.swift */; };
 		D3FF6D53276AC6EF003C8E9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D52276AC6EF003C8E9E /* User.swift */; };
@@ -32,10 +35,10 @@
 		D3FF6D68276AC761003C8E9E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D3FF6D67276AC761003C8E9E /* FirebaseAnalytics */; };
 		D3FF6D6A276AC761003C8E9E /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D3FF6D69276AC761003C8E9E /* FirebaseAnalyticsSwift-Beta */; };
 		D3FF6D6C276AC761003C8E9E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = D3FF6D6B276AC761003C8E9E /* FirebaseCrashlytics */; };
-		D3FF6D6E276ACAFD003C8E9E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D6D276ACAFD003C8E9E /* Question.swift */; };
+		D3FF6D6E276ACAFD003C8E9E /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D6D276ACAFD003C8E9E /* Quiz.swift */; };
 		D3FF6D71276ACE06003C8E9E /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D70276ACE06003C8E9E /* UserRepository.swift */; };
 		D3FF6D73276ACE0E003C8E9E /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D72276ACE0E003C8E9E /* AuthRepository.swift */; };
-		D3FF6D75276ACE17003C8E9E /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D74276ACE17003C8E9E /* QuestionRepository.swift */; };
+		D3FF6D75276ACE17003C8E9E /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF6D74276ACE17003C8E9E /* QuizRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,13 +86,16 @@
 		D30C56EC271BB8AD00DBB0F1 /* Application.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Application.docc; sourceTree = "<group>"; };
 		D30C5708271BB8CA00DBB0F1 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		D381567D271E5F6000F9FDDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D3AD09CC2776C25C008FAB4E /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
+		D3AD09D02776C3BA008FAB4E /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		D3AD09D22776C3C9008FAB4E /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		D3AD3A6C2722E9C8002767A2 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		D3AF4E46271DC3E8002C8335 /* SWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWButton.swift; sourceTree = "<group>"; };
 		D3FF6D52276AC6EF003C8E9E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D3FF6D6D276ACAFD003C8E9E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D3FF6D6D276ACAFD003C8E9E /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		D3FF6D70276ACE06003C8E9E /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		D3FF6D72276ACE0E003C8E9E /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
-		D3FF6D74276ACE17003C8E9E /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
+		D3FF6D74276ACE17003C8E9E /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,16 +194,27 @@
 		D30C570A271BBD6400DBB0F1 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				D3AD09CE2776C2E6008FAB4E /* Onboarding */,
 				D30C56B9271BB35E00DBB0F1 /* RootView.swift */,
+				D3AD09CC2776C25C008FAB4E /* RootModel.swift */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		D3AD09CE2776C2E6008FAB4E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D3AD09D02776C3BA008FAB4E /* OnboardingPage.swift */,
+				D3AD09D22776C3C9008FAB4E /* OnboardingModel.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		D3AF4E3C271DC036002C8335 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D3FF6D52276AC6EF003C8E9E /* User.swift */,
-				D3FF6D6D276ACAFD003C8E9E /* Question.swift */,
+				D3FF6D6D276ACAFD003C8E9E /* Quiz.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,7 +247,7 @@
 			children = (
 				D3FF6D70276ACE06003C8E9E /* UserRepository.swift */,
 				D3FF6D72276ACE0E003C8E9E /* AuthRepository.swift */,
-				D3FF6D74276ACE17003C8E9E /* QuestionRepository.swift */,
+				D3FF6D74276ACE17003C8E9E /* QuizRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -372,7 +389,10 @@
 				D30C5709271BB8CA00DBB0F1 /* CameraView.swift in Sources */,
 				D3AD3A6D2722E9C8002767A2 /* Secrets.swift in Sources */,
 				D30C56BA271BB35E00DBB0F1 /* RootView.swift in Sources */,
+				D3AD09CD2776C25C008FAB4E /* RootModel.swift in Sources */,
+				D3AD09D32776C3C9008FAB4E /* OnboardingModel.swift in Sources */,
 				D30C56B8271BB35E00DBB0F1 /* EmoChaApp.swift in Sources */,
+				D3AD09D12776C3BA008FAB4E /* OnboardingPage.swift in Sources */,
 				D3AF4E47271DC3E8002C8335 /* SWButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,8 +401,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3FF6D6E276ACAFD003C8E9E /* Question.swift in Sources */,
-				D3FF6D75276ACE17003C8E9E /* QuestionRepository.swift in Sources */,
+				D3FF6D6E276ACAFD003C8E9E /* Quiz.swift in Sources */,
+				D3FF6D75276ACE17003C8E9E /* QuizRepository.swift in Sources */,
 				D30C56ED271BB8AD00DBB0F1 /* Application.docc in Sources */,
 				D3FF6D71276ACE06003C8E9E /* UserRepository.swift in Sources */,
 				D3FF6D73276ACE0E003C8E9E /* AuthRepository.swift in Sources */,
